@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!--CSS-->
+     <link rel="stylesheet" href="styles1.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <!--fonts-->
+     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Great+Vibes&family=Kaushan+Script&family=Lobster&family=Sacramento&family=Satisfy&family=Yellowtail&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">     
+ <style>
+      a{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    float: left;
+    text-decoration: none;
+    width: 25%;
+    text-align:center;
+    padding: 1rem;
+    background-color:#318fb5;
+    height: 3rem;
+    color: #16213e;
+    border-right: 1px solid #cbaf87;
+    
+  }
+
+
+  a:hover{
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+    background-color: #74eafa;
+    color: #777777;
+  }
+  h3{
+    font-size: 1rem;
+}
+h5{
+    font-size: 1.5rem;
+}
+h3,h5{
+    
+    margin-top: 1.5rem;
+    font-family: 'Carter One', cursive;
+    
+}
+.img-flui{
+    height: 9rem;
+}
+ .content-2, .content-3 , .content-4{
+    display: none;
+    line-height: 1.5;
+    clear: left;
+}
+
+@media screen and (max-width: 800px) {
+    .container{
+        margin: 2rem 5rem;
+    }
+    a{
+        font-size: 1.5rem;
+        padding: 0.2rem;
+        height: 5rem;
+        width: 25%;
+    
+       
+    }
+}
+ </style>
+
+</head>
+<body>
+    <img  src="boy.png" alt="" style="
+    position: absolute;
+     top: 30px;
+     left: 150px;
+     border-radius: 50%;
+     background-color: #ffffff;
+     height: 100px;
+     width: 100px;"
+   >
+     <h1 style="text-align: center; font-size: 6rem; font-family: 'Lobster', cursive;"> Qualifications </h1>
+     <br>
+     <br>
+    
+     <div class="w-50" style="margin: auto;">
+        <div class="nav">
+   
+        <a onclick="displayabout">About</a>
+        <a  onclick="display10()">Class &nbsp  10th</a>
+        <a  onclick="display12()">Class &nbsp 12th</a>
+        <a onclick="displaybtech()">B.tech</a>
+        
+        </div>
+   
+        <div class="content" style="
+         background-color:#74eafa;
+    padding: 1rem 3rem;
+    text-align: center;
+    clear: left;
+        "> 
+   
+   <div id="about" class="content-1">
+    <img class="img-flui" src="https://yash-kr.github.io/educational/boy.svg" alt=""> <br>
+     <h3> Hi ,I'm prince jaiswal</h3>
+     <h3> CSE(2nd year)</h3>
+     <h3> NIT Patna</h3>
+  </div>
+
+   
+            <div id="class10th" class="content-2">
+              <img class="img-flui" src="https://yash-kr.github.io/educational/10.svg" alt=""> <br>
+               <h3> School Name : S.M. Arya Public School</h3>
+               <h3> CITY : New Delhi</h3>
+               <h3> SCORE : 6.6 CGPA</h3>
+            </div>
+   
+            <div id="class12th" class="content-3">
+               <img class="img-flui" src="https://yash-kr.github.io/educational/12.svg" alt=""> <br>
+               <h3> School Name : Heera Lal Sr. Sec. School</h3>
+               <h3> CITY : New Delhi</h3>
+               <h3> SCORE : 86.2% </h3>
+           </div>
+   
+           <div id="btech" class="content-4">
+               <img  class="img-flui"src="https://yash-kr.github.io/educational/college.svg" alt=""> <br>
+               <h3> College Name : NATIONAL INSTITUTE OF TECHNOLOGY PATNA</h3>
+               <h3> CITY : PATNA,BIHAR </h3>
+               <h3> SCORE : 8.12 CGPA </h3>  
+           </div>
+   
+        </div>
+        <br>
+        <br>
+   
+       <div  style=" text-align: center;
+       margin: auto;">
+       
+       <h2>Achievemetns:</h2>
+       <div id="i10">
+         <h3>Maths:</h3>
+         <p><li>RMO scholar in 10th std.</li></p>
+         <p><li>Became 5 times city topper in SOF olympaids in diff std.</li></p>
+         <p><li>Became All india rank 3 in SOF olympaids in 8 std.</li></p>
+       </div>
+       <div id="i12">
+         <h3>college</h3>
+         <p><li>A member of the Web team,Incubation Centre </li></p>
+         <p><li>A memeber of Development and design team ,Ecell</li></p>
+       </div>
+       
+    </div>
+        <script>
+   
+          function hideall( a,b,c)
+           {
+               document.getElementById(a).style.display="none";
+               document.getElementById(b).style.display="none";
+               document.getElementById(c).style.display="none";
+           }
+   
+           function displayabout()
+           {
+               hideall("class10th","class12th","btech");
+               document.getElementById("about").style.display="block";
+           }
+   
+           function display10()
+           {
+               hideall("about","class12th","btech");
+               document.getElementById("class10th").style.display="block";
+           }
+           
+           function display12()
+           {
+               hideall("about","class10th","btech");
+               document.getElementById("class12th").style.display="block";
+           }
+           function displaybtech()
+           {
+               hideall("about","class10th","class12th");
+               document.getElementById("btech").style.display="block";
+           }
+          
+   
+       </script>
+</body>
+</html>    
